@@ -4,7 +4,7 @@ This simple API provides information about OKS circulating supply and total supp
 
 ## Circulating supply
 ```
-GET http://localhost:8088/api/circulating_supply 
+GET https://cmc-api.oikos.cash/api/circulating_supply
 ```
 
 Example response
@@ -15,7 +15,7 @@ Example response
 
 ## Total supply
 ```
-GET http://localhost:8088/api/total_supply 
+GET https://cmc-api.oikos.cash/api/total_supply 
 ```
 
 Example response
