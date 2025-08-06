@@ -1,0 +1,22 @@
+{
+	"name": "Oikos CMC API",
+	"version": "0.0.1",
+	"description": "Oikos CMC API endpoints",
+	"main": "app.js",
+	"type": "module",
+	"scripts": {
+		"start": "node src/app.js",
+		"watch": "nodemon src/app.js"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"memory-cache": "^0.2.0",
+		"ethers": "latest"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.4"
+	}
+}
