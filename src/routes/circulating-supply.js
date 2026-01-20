@@ -26,14 +26,14 @@ const getCirculatingSupply = async (req, res) => {
       return res.status(400).json({ error: "Invalid TOKEN_ADDRESS — no contract deployed" });
     }
 
-    // Instantiate contracts
+    // Instantiate vault contract
     const vaultContract = new Contract(vaultAddress, BaseVault.abi, provider);
 
-    // Fetch data
+    // Fetch circulating supply from vault's getVaultInfo() - same as frontend Liquidity page
     const vaultInfo = await vaultContract.getVaultInfo();
-    const circulatingSupply = vaultInfo[1];
+    const circulatingSupply = vaultInfo.circulatingSupply;
 
-    console.log({ vaultInfo })
+    console.log({ circulatingSupply })
     console.log(`Circulating Supply: ${ethers.formatUnits(circulatingSupply, 18)}`);
 
     // Cache and return result
