@@ -3,7 +3,7 @@ dotenv.config();
 
 import cache from 'memory-cache';
 import { ethers, Contract, JsonRpcProvider } from "ethers";
-import BaseVault from '../assets/BaseVault.json' assert { type: 'json' };
+import BaseVault from '../assets/BaseVault.json' with { type: 'json' };
 
 const provider = new JsonRpcProvider(process.env.RPC_URL);
 

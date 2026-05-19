@@ -3,7 +3,7 @@ dotenv.config();
 
 import cache from 'memory-cache';
 import { ethers, Contract, JsonRpcProvider } from "ethers";
-import ERC20 from '../assets/ERC20.json' assert { type: 'json' };
+import ERC20 from '../assets/ERC20.json' with { type: 'json' };
 
 const provider = new JsonRpcProvider(process.env.RPC_URL);
 
