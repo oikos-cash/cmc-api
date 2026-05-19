@@ -1,6 +1,6 @@
 {
 	"name": "Oikos CMC API",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Oikos CMC API endpoints",
 	"main": "app.js",
 	"type": "module",
