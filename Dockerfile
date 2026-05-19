@@ -1,10 +1,10 @@
-FROM node:20-bookworm-slim AS deps
+FROM node:22.12.0-bookworm-slim AS deps
 WORKDIR /app
 ENV NODE_OPTIONS=--dns-result-order=ipv4first
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev --no-audit --no-fund
 
-FROM node:20-bookworm-slim AS runtime
+FROM node:22.12.0-bookworm-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 
